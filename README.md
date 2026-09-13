@@ -1,5 +1,5 @@
 repeat task.wait() until game:IsLoaded()
-local Header = "https://api.luarmor.net/files/v4/loaders/"
+local Header = ""
 local KeySystem = {
     Services = {
         Players = game:GetService("Players"),
@@ -10,9 +10,9 @@ local KeySystem = {
         Name = "ZeroPointKeySystem",
         Folder = "ZeroPoint",
         KeyFile = "ZeroPoint/Key.txt",
-        LinkvertiseLink = "https://ads.luarmor.net/get_key?for=Link-kuzvsbvNJEmd",
-        WorkInkLink = "https://ads.luarmor.net/get_key?for=work-JnToxNyHzcYw",
-        LootLabsLink = "https://ads.luarmor.net/get_key?for=Check_Point_1-LhAVqaYWiOJA",
+        LinkvertiseLink = "",
+        WorkInkLink = "",
+        LootLabsLink = "",
         DiscordInvite = "https://discord.gg/Nk44e68bmn",
         Games = {
             [66654135] = {
@@ -155,7 +155,7 @@ function KeySystem.Functions.ValidateKey(Key)
     end
     if not KeySystem.State.KeyApi then
         local Success, Result = pcall(function()
-            return loadstring(game:HttpGet("https://sdkapi-public.luarmor.net/library.lua"))()
+            return loadstring(game:HttpGet(""))()
         end)
         if not Success or type(Result) ~= "table" then
             return false, "Failed to load Luarmor key API."
